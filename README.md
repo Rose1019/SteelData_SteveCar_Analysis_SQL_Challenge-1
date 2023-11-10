@@ -47,7 +47,7 @@ join sales s
 using(c_id)
 where year(s.purchase_date) = '2022';
 ``` 
-
+ 
 ```
                                  Output
 Fetches all the cal details purchased in the year 2022
