@@ -374,7 +374,7 @@ select *
 from cte1
 order by revenue desc
 limit 1;
-*/ 
+*/  
 
 ``` 
 
