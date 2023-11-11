@@ -176,20 +176,6 @@ join sales s
 using(c_id)
 where c.style = 'SUV' AND year(s.purchase_date)='2022';
 
-/*Create a function to get the YEAR value when for a given date*/
-
-/*  create function get_year (
-   calendar_date date
-)
-Returns int
-    DETERMINISTIC
-BEGIN
-DECLARE Year int;
-SET Year = Year(calendar_date);
-RETURN Year;
-END
-*/
-
 /*STORED PROCEDURE for any style of car for any given year*/
 /* 
 create procedure revenue_any_car_type_year(
