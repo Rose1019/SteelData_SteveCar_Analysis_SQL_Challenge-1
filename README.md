@@ -50,7 +50,7 @@ where year(s.purchase_date) = '2022';
  
 ```
                                  Output
-Fetches all the cal details purchased in the year 2022
+Fetches all the car details purchased in the year 2022
 
                               Concepts learned
 1.YEAR()
