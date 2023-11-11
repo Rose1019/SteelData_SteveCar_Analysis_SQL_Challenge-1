@@ -201,12 +201,10 @@ BEGIN
     WHERE YEAR(s.purchase_date) = 2023
     GROUP BY sp.sm_id, sp.name, sp.city
 )
- 
-SELECT *
+ SELECT *
 FROM cte1
 order by cars_sold desc
 limit 1;
-
 /*Create STORED PROCEDURE to get a report of salesperson who sold the most number of cars in any given YEAR
 input - YEAR*/
 
@@ -221,7 +219,6 @@ WITH cte1 AS (
     WHERE YEAR(s.purchase_date) = 2023
     GROUP BY sp.sm_id, sp.name, sp.city
 )
- 
 SELECT *
 FROM cte1
 order by cars_sold desc
@@ -230,7 +227,6 @@ END
 */
 
 /*10. What is the name and age of the salesperson who generated the highest revenue in the year 2022?*/
-
 with cte1 AS(
 select sp.sm_id,sp.name,sp.age,sum(c.cost_$) as revenue
 from salespersons sp 
@@ -241,12 +237,10 @@ using(c_id)
 WHERE YEAR(s.purchase_date) = 2022
 group by sp.sm_id,sp.name,sp.age
 )
-
 select *
 from cte1
 order by revenue desc
 limit 1;
-
 /*STORED PROCEDURE*/
 /*
 CREATE DEFINER=`root`@`localhost` PROCEDURE `report_salesperson_earns_highest_revenue`(
@@ -263,12 +257,10 @@ using(c_id)
 WHERE YEAR(s.purchase_date) = in_year
 group by sp.sm_id,sp.name,sp.age
 )
-
 select *
 from cte1
 order by revenue desc
-limit 1;
-*/ 
+limit 1; */ 
  
  
  
